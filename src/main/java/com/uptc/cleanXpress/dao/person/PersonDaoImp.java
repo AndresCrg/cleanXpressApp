@@ -1,5 +1,6 @@
-package com.uptc.cleanXpress.dao;
+package com.uptc.cleanXpress.dao.person;
 
+import com.uptc.cleanXpress.dao.person.PersonDao;
 import com.uptc.cleanXpress.models.Person;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class PersonDaoImp implements PersonDao{
+public class PersonDaoImp implements PersonDao {
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -23,5 +24,16 @@ public class PersonDaoImp implements PersonDao{
          */
         String query = "FROM Person";
         return entityManager.createQuery(query).getResultList();
+    }
+
+    @Override
+    public void registerPerson(Person person) {
+        entityManager.persist(person);
+    }
+
+    @Override
+    public void delete(String id) {
+        Person person = entityManager.find(Person.class, id);
+        entityManager.remove(person);
     }
 }
