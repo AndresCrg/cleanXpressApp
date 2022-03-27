@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Realizar Cotización</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/js/prueba.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div class="row">
+
+    <div class="col s3 teal lighten-2" >
+        <h2>aasfasfa</h2>
+    </div>
+
+    <div class="col s9 deep-orange lighten-3">
+        <h2></h2>
+        <div class="col s12 m4 l2"><p></p></div>
+        <div class="col s12 m4 l8 teal lighten-5">
+            <p style="text-align: center">Realizar Cotización</p>
+            <form action="pupi" class="col s12" method="post">
+                <label>Seleccione el tipo de jornada</label>
+                <select class="browser-default" name="working-day">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="M">Mañana</option>
+                    <option value="T">Tarde</option>
+                    <option value="C">Completa</option>
+                </select>
+
+                <label>Seleccione el tipo de frecuencia</label>
+                <select class="browser-default" name="working-day">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="UC">Única</option>
+                    <option value="SM">Semanal</option>
+                    <option value="QC">Quincenal</option>
+                    <option value="MS">Mensual</option>
+                </select>
+
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Prioridad</span>
+                    </label>
+                </p>
+
+                <label>Seleccione la fecha del servicio</label>
+                <input placeholder="fecha del servicio" type="text" class="datepicker" name="date">
+
+                <h5 class="teal-text text-lighten-5">?</h5>
+
+                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                    <i class="material-icons right">arrow_forward</i>
+                </button>
+                <h5 class="teal-text text-lighten-5">?</h5>
+            </form>
+        </div>
+        <h2 class="deep-orange-text text-lighten-3">??????????????????????????</h2>
+        <div class="col s12 m4 l2"><p></p></div><br>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
