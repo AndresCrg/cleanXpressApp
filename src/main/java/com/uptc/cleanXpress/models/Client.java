@@ -12,8 +12,8 @@ import java.util.List;
 @PrimaryKeyJoinColumn(referencedColumnName = "documento")
 public class Client extends Person{
 
-    @Getter @Setter @Column(name = "tipo_cliente")
-    private ClientType clientType;
+    @Column(name = "tipo_cliente")
+    private String clientType;
 
     @Getter @Setter @Column(name = "contrasena")
     private String password;
@@ -21,4 +21,12 @@ public class Client extends Person{
     @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Getter @Setter
     private List<Service> services;
+
+    public String getClientType() {
+        return clientType;
+    }
+
+    public void setClientType(String clientType) {
+        this.clientType = clientType;
+    }
 }

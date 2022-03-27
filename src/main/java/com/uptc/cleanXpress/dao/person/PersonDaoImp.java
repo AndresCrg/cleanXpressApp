@@ -23,12 +23,14 @@ public class PersonDaoImp implements PersonDao {
          * Se puede colocar condiciones... WHERE
          */
         String query = "FROM Person";
+        System.out.println(entityManager.createQuery(query).getResultList());
         return entityManager.createQuery(query).getResultList();
     }
 
     @Override
     public void registerPerson(Person person) {
-        entityManager.persist(person);
+        System.out.println("Implementacion" + person.getId());
+        entityManager.merge(person);
     }
 
     @Override

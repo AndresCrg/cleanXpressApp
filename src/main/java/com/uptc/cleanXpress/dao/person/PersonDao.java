@@ -4,7 +4,7 @@ import com.uptc.cleanXpress.models.Person;
 
 import java.util.List;
 
-public interface PersonDao {
+public interface PersonDao{
 
     List<Person> getPersons();
 

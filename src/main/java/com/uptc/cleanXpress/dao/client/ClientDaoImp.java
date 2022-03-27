@@ -1,6 +1,7 @@
 package com.uptc.cleanXpress.dao.client;
 
 import com.uptc.cleanXpress.models.Client;
+import com.uptc.cleanXpress.models.Person;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,8 +18,8 @@ public class ClientDaoImp implements ClientDao{
 
     @Override
     public List<Client> getClients() {
-        String query = "FROM Client";
-        return entityManager.createQuery(query).getResultList();
+        List<Client> clients = entityManager.createQuery("SELECT c FROM Client c", Client.class).getResultList();
+        return clients;
     }
 
     @Override
@@ -29,6 +30,6 @@ public class ClientDaoImp implements ClientDao{
 
     @Override
     public void registerClient(Client client) {
-        entityManager.persist(client);
+        entityManager.merge(client);
     }
 }

@@ -22,6 +22,6 @@ public class EmployeeController {
         employeeDao.registerEmployee(employee);
     }
 
-    @RequestMapping(value = "/api/getPersons/{id}", method = RequestMethod.DELETE)
-    public void deletePerson(@PathVariable String id){employeeDao.delete(id);}
+    @RequestMapping(value = "/api/getEmployees/{id}", method = RequestMethod.DELETE)
+    public void deleteEmployee(@PathVariable String id){employeeDao.delete(id);}
 }
