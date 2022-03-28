@@ -1,6 +1,4 @@
 package com.uptc.cleanXpress.models;
-
-import com.uptc.cleanXpress.utilities.ClientType;
 import lombok.Getter;
 import lombok.Setter;
 

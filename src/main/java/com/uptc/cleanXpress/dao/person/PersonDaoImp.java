@@ -29,7 +29,6 @@ public class PersonDaoImp implements PersonDao {
 
     @Override
     public void registerPerson(Person person) {
-        System.out.println("Implementacion" + person.getId());
         entityManager.merge(person);
     }
 

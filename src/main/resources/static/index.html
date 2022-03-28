@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body id="index_page">
 
 <main>
 
@@ -34,11 +34,11 @@
         <!--Formulario de Login y registro-->
         <div class="contenedor__login-register">
             <!--Login-->
-            <form action="" method="" class="formulario__login">
+            <form action="" class="formulario__login">
                 <h2>Iniciar Sesión</h2>
-                <input type="text" placeholder="Numero de Documento" name="num-doc">
-                <input type="password" placeholder="Contraseña" name="password">
-                <button>Entrar</button>
+                <input id="idLogin" type="text" placeholder="Numero de Documento">
+                <input id="passwordLogin" type="password" placeholder="Contraseña">
+                <button onclick="login()">Entrar</button>
             </form>
 
             <!--Register-->
@@ -56,7 +56,7 @@
                     <option value="COM">Comercial</option>
                 </select>
                 <input id="password" type="password" placeholder="Contraseña">
-                <button onclick="registerPerson()">Regístrarse</button>
+                <button onclick="registerClient()" href="#">Regístrarse</button>
             </form>
         </div>
     </div>

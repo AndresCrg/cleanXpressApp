@@ -16,9 +16,9 @@ public class ClientController {
     @RequestMapping(value = "api/clients", method = RequestMethod.GET)
     public List<Client> getClients(){ return clientDao.getClients();}
 
-    @RequestMapping(value = "/api/clients")
+    @RequestMapping(value = "/api/clients", method = RequestMethod.POST)
     public void registerClient(@RequestBody Client client){
-        System.out.println(client.getName());
+        System.out.println("dwwedw" + client.getAddress());
         clientDao.registerClient(client);
     }
 

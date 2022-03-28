@@ -12,31 +12,15 @@ var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_register = document.querySelector(".caja__trasera-register");
 
 //FUNCIONES
-
-async function registerPerson(){
-    let dataPerson = {
+async function registerClient(){
+    let dataClient = {
         id: document.getElementById('num-doc').value,
         name: document.getElementById('full-name').value,
         address: document.getElementById('address').value,
         phoneNumber: document.getElementById('phone').value,
         email: document.getElementById('email').value,
-    }
-    const request = await fetch('/api/persons', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dataPerson)
-    });
-    await registerClient();
-}
-
-async function registerClient() {
-    let dataClient = {
-        id: document.getElementsByName('num-doc').value,
-        clientType: document.getElementsByName('clientType').value,
-        password: document.getElementsByName('password').value
+        clientType: document.getElementById('type-person').value,
+        password: document.getElementById('password').value
     }
     const request = await fetch('/api/clients', {
         method: 'POST',
@@ -46,6 +30,30 @@ async function registerClient() {
         },
         body: JSON.stringify(dataClient)
     });
+    alert('Usuario creado exitosamente!')
+}
+
+async function login(){
+    let dataClient = {
+        id: document.getElementById('idLogin').value,
+        password: document.getElementById('passwordLogin').value
+    }
+    console.log(dataClient)
+    const request = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataClient)
+    });
+    const response = await request.text();
+    console.log(response)
+    if (response == 'OK'){
+        window.location.href = 'dashboardClient.html'
+    }else{
+        alert('Datos incorrectos. Por favor vuelve a intentarlo nuevamente!')
+    }
 }
 
 function anchoPage(){

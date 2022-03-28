@@ -10,4 +10,6 @@ public interface ClientDao {
     void delete(String id);
 
     void registerClient(Client client);
+
+    boolean checkDataLogin(Client client);
 }
