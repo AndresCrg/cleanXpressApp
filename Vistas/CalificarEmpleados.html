@@ -2,13 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Realizar Cotización</title>
+    <title>Calificar Empleados</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    </script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var textNeedCount = document.querySelectorAll('#textarea2, #textarea2');
+            M.CharacterCounter.init(textNeedCount);
+        });
+
+    </script>
     <script src="assets/js/prueba.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assets/js/CalificarEmpleados.js"></script>
 </head>
 <body>
 
@@ -50,46 +65,24 @@
 
     </div>
 
-    <div class="col s8 deep-orange lighten-3">
+    <div class="col s8 deep-orange lighten-3" style="height: 600px">
         <h2></h2>
         <div class="col s12 m4 l2"><p></p></div>
-        <div class="col s12 m4 l8 teal lighten-5">
-            <p style="text-align: center">Realizar Cotización</p>
-            <form action="" class="col s12" method="">
-                <label>Seleccione el tipo de jornada</label>
-                <select class="browser-default" id="working-day">
-                    <option value="" disabled selected>Seleccione una opción</option>
-                    <option value="M">Mañana</option>
-                    <option value="T">Tarde</option>
-                    <option value="C">Completa</option>
-                </select>
+        <div class="col s12 m4 l8 deep-orange lighten-5">
 
-                <label>Seleccione el tipo de frecuencia</label>
-                <select class="browser-default" id="frecuency">
-                    <option value="" disabled selected>Seleccione una opción</option>
-                    <option value="UC">Única</option>
-                    <option value="SM">Semanal</option>
-                    <option value="QC">Quincenal</option>
-                    <option value="MS">Mensual</option>
-                </select>
+            <table id="dataEmployeesTable">
+                <thead>
+                <tr>
+                    <th>Documento</th>
+                    <th>Nombre</th>
+                    <th>Calificación</th>
+                    <th>Comentario</th>
+                    <th>Enviar</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
 
-                <p>
-                    <label>
-                        <input type="checkbox" id="priority" />
-                        <span>Prioridad</span>
-                    </label>
-                </p>
-
-                <label>Seleccione la fecha del servicio</label>
-                <input placeholder="fecha del servicio" type="text" class="datepicker" id="date">
-
-                <h5 class="teal-text text-lighten-5">?</h5>
-
-                <button style="margin-left: 40%" class="btn waves-effect waves-light" type="submit" name="action">Enviar
-                    <i class="material-icons right">arrow_forward</i>
-                </button>
-                <h5 class="teal-text text-lighten-5">?</h5>
-            </form>
         </div>
         <h2 class="deep-orange-text text-lighten-3">??????????????????????????</h2>
         <div class="col s12 m4 l2"><p></p></div><br>

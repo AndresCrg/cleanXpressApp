@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Empleados</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    </script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var textNeedCount = document.querySelectorAll('#textarea2, #textarea2');
+            M.CharacterCounter.init(textNeedCount);
+        });
+
+    </script>
+    <script src="assets/js/prueba.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assets/js/CalificarEmpleados.js"></script>
+</head>
+<body>
+
+<div class="row">
+
+    <div class="col s4 blue lighten-1" style="height: 600px" >
+        <h4 style="text-align: center">Menu Administrador</h4>
+
+
+        <ul class="collapsible">
+            <a href="AgregarEmpleado.html" class=" black-text text- black">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">group_add</i>
+                        Agregar Empleado
+                    </div>
+                </li>
+            </a>
+
+            <a href="ListarEmpleados.html" class=" black-text text- black">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">list</i>
+                        Mostrar Empleados
+                    </div>
+                </li>
+            </a>
+
+            <a href="ListarServicios.html" class=" black-text text- black">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">playlist_add_check</i>
+                        Listar Servicios
+                    </div>
+                </li>
+            </a>
+
+            <a href="AsignarEmpleados.html" class=" black-text text- black">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">transfer_within_a_station</i>
+                        Calificar Empleados
+                    </div>
+                </li>
+            </a>
+
+        </ul>
+
+    </div>
+
+    <div class="col s8 red lighten-1" style="height: 600px">
+        <h2></h2>
+        <div class="col s12 m4 l2"><p></p></div>
+        <div class="col s12 m4 l8 deep-orange lighten-5">
+
+            <table id="dataEmployeesListTable">
+                <thead>
+                <tr>
+                    <th>Documento</th>
+                    <th>Nombre</th>
+                    <th>Calificación Promedio</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+        <div class="col s12 m4 l2"><p></p></div><br>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
