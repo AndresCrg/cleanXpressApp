@@ -35,11 +35,14 @@ public class ClientDaoImp implements ClientDao{
 
     @Override
     public boolean checkDataLogin(Client client) {
-        Client result = entityManager.createQuery("SELECT c FROM Client c WHERE c.id  = :id AND c.password = :password",Client.class)
-                .setParameter("id", client.getId())
-                .setParameter("password", client.getPassword())
-                .getSingleResult();
-
-        return result != null;
+        try {
+            Client result = entityManager.createQuery("SELECT c FROM Client c WHERE c.id  = :id AND c.password = :password",Client.class)
+                    .setParameter("id", client.getId())
+                    .setParameter("password", client.getPassword())
+                    .getSingleResult();
+            return true;
+        }catch (Exception e) {
+            return false;
+        }
     }
 }

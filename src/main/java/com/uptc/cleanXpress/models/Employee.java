@@ -13,7 +13,7 @@ import java.util.List;
 public class Employee extends Person{
 
     @Getter @Setter @Column(name = "estado")
-    private State state;
+    private String state;
 
     @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Getter @Setter

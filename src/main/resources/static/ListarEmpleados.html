@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="./js/ListarEmpleados.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             M.AutoInit();
@@ -22,7 +22,7 @@
 
     </script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="./js/CalificarEmpleados.js"></script>
+    <script src="./js/ListarEmpleados.js"></script>
 </head>
 <body>
 
@@ -42,7 +42,7 @@
                 </li>
             </a>
 
-            <a href="ListarEmpleados.html" class=" black-text text- black">
+            <a onclick="loadListEmployees()" class=" black-text text- black">
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">list</i>
@@ -64,7 +64,7 @@
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">transfer_within_a_station</i>
-                        Calificar Empleados
+                        Asignar Empleados
                     </div>
                 </li>
             </a>
@@ -83,7 +83,6 @@
                 <tr>
                     <th>Documento</th>
                     <th>Nombre</th>
-                    <th>Calificación Promedio</th>
                     <th>Estado</th>
                 </tr>
                 </thead>
@@ -92,7 +91,10 @@
 
         </div>
         <div class="col s12 m4 l2"><p></p></div><br>
+
+
     </div>
+
 </div>
 
 </body>

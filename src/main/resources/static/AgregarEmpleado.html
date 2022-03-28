@@ -5,6 +5,7 @@
   <title>Agregar Empleados</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -22,8 +23,7 @@
 
   </script>
   <script src="./js/prueba.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="./js/CalificarEmpleados.js"></script>
+  <script src="./js/agregarEmpleado.js"></script>
 </head>
 <body>
 
@@ -65,7 +65,7 @@
         <li>
           <div class="collapsible-header">
             <i class="material-icons">transfer_within_a_station</i>
-            Calificar Empleados
+            Asignar Empleados
           </div>
         </li>
       </a>
@@ -103,12 +103,12 @@
         </div>
 
         <div class="input-field inline">
-          <input id="email_inline" type="email" class="validate">
-          <label for="email_inline">Email</label>
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
           <span class="helper-text" data-error="Incompleto" data-success="right">ejemplo@dominio.com</span>
         </div>
 
-        <button style="margin-left: 40%" class="btn waves-effect red lighten-1" type="submit" name="action">Enviar
+        <button style="margin-left: 40%" class="btn waves-effect red lighten-1" type="submit" onclick="registerEmployee()" name="action">Enviar
           <i class="material-icons right">arrow_forward</i>
         </button>
         <h5 class="teal-text text-lighten-5">?</h5>

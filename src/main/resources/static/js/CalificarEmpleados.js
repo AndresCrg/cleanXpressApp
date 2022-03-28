@@ -10,10 +10,10 @@ async function loadQualify() {
             'Content-Type': 'application/json'
         }
     });
-    const employeetListList = await request.json();
+    const employeeList = await request.json();
     let listClientHTML = '';
 
-    for (let employee of employeetList) {
+    for (let employee of employeeList) {
         let clientHTML =
             '<tr>\n' +
             '<td name="doc_field" class="text-center">' + employee.doc + '</td>\n' +

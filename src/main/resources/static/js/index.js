@@ -56,7 +56,7 @@ async function login(){
     }else if(response == 'Session-Admin'){
         localStorage.setItem('document_admin', document.getElementById('idLogin').value)
         localStorage.setItem('password_admin', document.getElementById('passwordLogin').value)
-        window.localStorage.href = '';
+        window.location.href = 'AgregarEmpleado.html';
     }
 }
 
