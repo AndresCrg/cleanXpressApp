@@ -29,6 +29,6 @@ public class ServiceDaoImp implements ServiceDao{
 
     @Override
     public void registerService(Service service) {
-        entityManager.persist(service);
+        entityManager.merge(service);
     }
 }

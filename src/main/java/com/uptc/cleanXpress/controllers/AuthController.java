@@ -16,10 +16,10 @@ public class AuthController {
 
     @RequestMapping(value = "/api/login", method = RequestMethod.POST)
     public String login(@RequestBody Client client){
-        System.out.println(client.getId() + client.getPassword());
        if (clientDao.checkDataLogin(client)) {
-           return "OK";
+           return "Session-Client";
+       }else{
+           return "Session-Admin";
        }
-           return "FAIL";
     }
 }

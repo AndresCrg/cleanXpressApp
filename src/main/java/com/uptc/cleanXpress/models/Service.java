@@ -1,14 +1,10 @@
 package com.uptc.cleanXpress.models;
 
-import com.uptc.cleanXpress.utilities.Frecuency;
-import com.uptc.cleanXpress.utilities.StateService;
-import com.uptc.cleanXpress.utilities.WorkingDay;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Table(name = "servicios")
@@ -19,24 +15,24 @@ public class Service {
     private int id;
 
     @Getter @Setter @Column(name = "tipo_jornada")
-    private WorkingDay workingDay;
+    private String workingDay;
 
     @Getter @Setter @Column(name = "tipo_frecuencia")
-    private Frecuency frequency;
+    private String frequency;
 
     @Getter @Setter @Column(name = "fecha_servicio")
-    private LocalDate date;
+    private String date;
 
     @Getter @Setter @Column(name = "prioridad")
-    private boolean priority;
+    private int priority;
 
     @Getter @Setter @Column(name = "estado_servicio")
-    private StateService stateService;
+    private String stateService;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "documento_cliente", nullable = false)
     @Getter @Setter
-    private Client client;
+    private Client clientId;
 
     @OneToOne(mappedBy = "service", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Bill bill;

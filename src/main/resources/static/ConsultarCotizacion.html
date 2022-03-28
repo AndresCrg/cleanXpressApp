@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultar Cotización</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.AutoInit();
+    });
+
+  </script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div class="row">
+
+  <div class="col s4 teal lighten-2" style="height: 600px" >
+    <h4 style="text-align: center">Menu Cliente</h4>
+
+
+    <ul class="collapsible">
+      <a href="HacerCotizacion.html" class=" black-text text- black">
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">add_circle_outline</i>
+            Hacer Cotización
+          </div>
+        </li>
+      </a>
+
+      <a href="ConsultarCotizacion.html" class=" black-text text- black">
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">assignment</i>
+            Consultar Cotización
+          </div>
+        </li>
+      </a>
+
+      <a href="CalificarEmpleados.html" class=" black-text text- black">
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">comment</i>
+            Calificar Empleados
+          </div>
+        </li>
+      </a>
+
+    </ul>
+
+  </div>
+
+  <div class="col s8 deep-orange lighten-3" style="height: 600px">
+    <h2></h2>
+    <div class="col s12 m4 l2"><p></p></div>
+    <div class="col s12 m4 l8 deep-orange lighten-3">
+      <div class="card">
+        <div class="card-content">
+          <h5 style="text-align: center">Consultar Cotización</h5>
+          <br>
+          <p>A continuación encontrará información de su cotización. Cuando el estado de la misma cambie por el administrador, podrá aceptarla o rechazarla.</p>
+        </div>
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#jornada">Jornada</a></li>
+            <li class="tab"><a href="#frecuencia">Frecuencia</a></li>
+            <li class="tab"><a href="#prioridad">Prioridad</a></li>
+            <li class="tab"><a href="#fecha">Fecha</a></li>
+            <li class="tab"><a href="#estado">Estado</a></li>
+          </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+          <div id="jornada">La jornada es: </div>
+          <div id="frecuencia">La Frecuencia es: </div>
+          <div id="prioridad">Prioridad: </div>
+          <div id="fecha">Fecha Programada: </div>
+          <div id="estado">Estado actual: poner el estado acá
+
+            <br><br>
+            <form action="" method="">
+              <p>
+                <label>
+                  <input name="decision" type="radio" checked value="aceptar" />
+                  <span>Aceptar</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="decision" type="radio" value="rechazar" />
+                  <span>Rechazar</span>
+                </label>
+              </p>
+              <br>
+              <button class="btn waves-effect waves-light deep-orange lighten-2" type="submit" name="action">Enviar
+                <i class="material-icons left">check</i>
+              </button>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="deep-orange-text text-lighten-3">??????????????????????????</h2>
+    <div class="col s12 m4 l2"><p></p></div><br>
+
+
+  </div>
+
+</div>
+
+</body>
+</html>

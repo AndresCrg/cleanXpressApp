@@ -49,10 +49,14 @@ async function login(){
     });
     const response = await request.text();
     console.log(response)
-    if (response == 'OK'){
-        window.location.href = 'dashboardClient.html'
-    }else{
-        alert('Datos incorrectos. Por favor vuelve a intentarlo nuevamente!')
+    if (response == 'Session-Client'){
+        localStorage.setItem('document_client', document.getElementById('idLogin').value)
+        localStorage.setItem('password_client', document.getElementById('passwordLogin').value)
+        window.location.href = 'HacerCotizacion.html'
+    }else if(response == 'Session-Admin'){
+        localStorage.setItem('document_admin', document.getElementById('idLogin').value)
+        localStorage.setItem('password_admin', document.getElementById('passwordLogin').value)
+        window.localStorage.href = '';
     }
 }
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Realizar Cotización</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/prueba.js"></script>
+    <script src="./js/cotizacion.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div class="row">
+
+    <div class="col s4 teal lighten-2" style="height: 600px" >
+        <h4 style="text-align: center">Menu Cliente</h4>
+
+
+        <ul class="collapsible">
+            <a href="HacerCotizacion.html" class=" black-text text- black">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">add_circle_outline</i>
+                        Hacer Cotización
+                    </div>
+                </li>
+            </a>
+
+            <a href="ConsultarCotizacion.html" class=" black-text text- black">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">assignment</i>
+                        Consultar Cotización
+                    </div>
+                </li>
+            </a>
+
+            <a href="CalificarEmpleados.html" class=" black-text text- black">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">comment</i>
+                        Calificar Empleados
+                    </div>
+                </li>
+            </a>
+
+        </ul>
+
+    </div>
+
+    <div class="col s8 deep-orange lighten-3">
+        <h2></h2>
+        <div class="col s12 m4 l2"><p></p></div>
+        <div class="col s12 m4 l8 teal lighten-5">
+            <p style="text-align: center">Realizar Cotización</p>
+            <form action="" class="col s12" method="">
+                <label>Seleccione el tipo de jornada</label>
+                <select class="browser-default" id="working-day">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="M">Mañana</option>
+                    <option value="T">Tarde</option>
+                    <option value="C">Completa</option>
+                </select>
+
+                <label>Seleccione el tipo de frecuencia</label>
+                <select class="browser-default" id="frecuency">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="UC">Única</option>
+                    <option value="SM">Semanal</option>
+                    <option value="QC">Quincenal</option>
+                    <option value="MS">Mensual</option>
+                </select>
+
+                <p>
+                    <label>
+                        <input type="checkbox" id="priority" />
+                        <span>Prioridad</span>
+                    </label>
+                </p>
+
+                <label>Seleccione la fecha del servicio</label>
+                <input placeholder="fecha del servicio" type="text" class="datepicker" id="date">
+
+                <h5 class="teal-text text-lighten-5">?</h5>
+
+                <button style="margin-left: 40%" class="btn waves-effect waves-light" type="submit" onclick="registerService()" name="action">Enviar
+                    <i class="material-icons right">arrow_forward</i>
+                </button>
+            </form>
+        </div>
+        <div class="col s12 m4 l2"><p></p></div><br>
+
+
+    </div>
+</div>
+</body>
+</html>

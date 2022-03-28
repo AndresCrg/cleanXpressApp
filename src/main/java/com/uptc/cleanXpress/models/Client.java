@@ -16,7 +16,7 @@ public class Client extends Person{
     @Getter @Setter @Column(name = "contrasena")
     private String password;
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "clientId", fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @Getter @Setter
     private List<Service> services;
 
